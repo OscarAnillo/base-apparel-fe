@@ -15,10 +15,8 @@ export default function TextComponent() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
     if (!value.email) {
-        console.log('HI here~')
       error.email = "An email is required";
     } else if (!emailRegex.test(value.email)) {
-        console.log('Hello there!')
       error.email = "Please provide a valid email";
     }
     return error;
@@ -34,7 +32,7 @@ export default function TextComponent() {
     if (Object.keys(emailInput).length === 0 && isSubmitted) {
       console.log(emailInput);
     }
-  }, [ formErrors ]);
+  }, [ formErrors, emailInput, isSubmitted ]);
 
   return (
     <div className="text">
