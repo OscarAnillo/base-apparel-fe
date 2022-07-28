@@ -8,9 +8,15 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-        <NavLogo />
-        <ImageApparel />
-        <TextComponent />
+            <NavLogo />
+        <div className='row'>
+          <div>
+            <ImageApparel />
+          </div>
+          <div>
+            <TextComponent />
+          </div>
+        </div>
 
       </div>
     </div>
